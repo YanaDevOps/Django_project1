@@ -19,7 +19,9 @@ cd Python_project_1
 ```
 
 ### 2. Launching an application in Docker
+```bash
 docker-compose up --build
+```
 
 ### 3. Access to the application
 Open your browser and go to:
