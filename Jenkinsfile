@@ -16,7 +16,7 @@ pipeline {
         stage('Build') {
             steps {
                 // The command to build the project. 
-                // In my case it might be compiling code, but for a Django project it might just be checking dependencies.
+                // В этом случае может быть просто проверка зависимостей.
                 sh 'echo "Build step: No build required for this project."'
             }
         }
@@ -43,7 +43,7 @@ pipeline {
                     if (login == 0) {
                         echo 'Login to Docker Hub succeeded'
                         
-                        // Pushing image to Docker Hub
+                        // Пушим образ в Docker Hub
                         sh 'docker push yanixdo/python_project_1:latest'
                     } else {
                         error('Login to Docker Hub failed')
@@ -51,15 +51,16 @@ pipeline {
                 }
             }
         }
+    }
             
-        // Stage five: Deploy to the server (if necessary)
-        stage('Deploy') {
-            steps {
-                // Here you can add an upload to the server
-                sh 'echo "Deploy step: Deployment not implemented."'
-            }
+    // Stage five: Deploy to the server (if necessary)
+    stage('Deploy') {
+        steps {
+            // Here you can add an upload to the server
+            sh 'echo "Deploy step: Deployment not implemented."'
         }
     }
+}
         
     // After pipeline work ended
     post {
