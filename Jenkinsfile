@@ -8,7 +8,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Use GIT to clone the repository
-                git branch: 'ci-cd', url: 'https://github.com/YanaDevOps/Python_project_1'
+                git branch: 'ci-setup', url: 'https://github.com/YanaDevOps/Python_project_1'
             }
         }
 
