@@ -16,6 +16,7 @@ This project can be used as a template to customize your own applications with c
 ```bash
 git clone https://github.com/YanaDevOps/Python_project_1.git
 cd Python_project_1
+```
 
 ### 2. Launching an application in Docker
 docker-compose up --build
