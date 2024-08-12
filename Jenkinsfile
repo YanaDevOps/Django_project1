@@ -8,15 +8,21 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Use GIT to clone the repository
-                git url: 'https://github.com/YanaDevOps/Python_project_1'
+                git branch: 'ci-setup', url: 'https://github.com/YanaDevOps/Python_project_1'
+            }
+        }
+        
+        // Checkout Dockerfile and other resources from main branch
+        stage('Checkout main branch') {
+            steps {
+                git branch: 'main', url: 'https://github.com/YanaDevOps/Python_project_1'
             }
         }
 
         // Stage two: Project assembly
         stage('Build') {
             steps {
-                // The command to build the project. 
-                // В этом случае может быть просто проверка зависимостей.
+                // The command to build the project.
                 sh 'echo "Build step: No build required for this project."'
             }
         }
