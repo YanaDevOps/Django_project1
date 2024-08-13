@@ -1,34 +1,54 @@
-body {
+body, html {
+    height: 100%;
     margin: 0;
-    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Arial', sans-serif;
-    color: white;
-    background: linear-gradient(135deg, #32a89b, #0b6177);
-    background-size: 400% 400%;
-    animation: gradientAnimation 15s ease infinite;
-}
-
-@keyframes gradientAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    background: linear-gradient(135deg, #32a852, #287dc4);
+    overflow: hidden;
 }
 
 .container {
     text-align: center;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 20px;
-    border-radius: 10px;
+    z-index: 1;
 }
 
 h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
+    font-size: 4em;
+    margin-bottom: 20px;
 }
 
 p {
-    font-size: 1.5rem;
+    font-size: 1.5em;
+}
+
+/* Animated waves background */
+body::before, body::after {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: radial-gradient(circle at center, rgba(255,255,255,0.1), rgba(255,255,255,0) 70%);
+    z-index: 0;
+    animation: wave-animation 10s infinite linear;
+}
+
+body::after {
+    animation-delay: -5s;
+}
+
+@keyframes wave-animation {
+    0% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(5%) translateX(5%) rotate(2deg);
+    }
+    100% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+    }
 }
