@@ -7,7 +7,7 @@
 ## 📋 Description
 
 **Python_project_1** — This is a simple Flask web application designed to demo a CI/CD pipeline using Docker and Jenkins.
-This project can be used as a template to customize your own applications with continuous delivery and deployment integration. This project can be used as a template to customize your own applications with continuous delivery and deployment integration.
+This project can be used as a template to customize your own applications with continuous delivery and deployment integration.
 
 ## 🚀 Start of work
 
