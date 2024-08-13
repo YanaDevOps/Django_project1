@@ -25,7 +25,9 @@ docker-compose up --build
 
 ### 3. Access to the application
 Open your browser and go to:
+```bash
 http://localhost:5000
+```
 
 ## 📂 Project structure
 ```bash
