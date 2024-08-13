@@ -19,7 +19,7 @@ def greet():
 @app.route('/api/v1/info', methods=['GET'])
 def app_info():
     return jsonify({
-        "app_name": "Django_project1",
+        "app_name": "Python_project_1",
         "version": "1.0.0",
         "description": "A simple Flask application for CI/CD demonstration."
     })
