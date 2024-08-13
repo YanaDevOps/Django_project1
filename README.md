@@ -31,11 +31,15 @@ http://localhost:5000
 
 ## 📂 Project structure
 ```bash
+Python_project_1/
 ├── Dockerfile
 ├── docker-compose.yml
 ├── app.py
 ├── requirements.txt
-└── README.md
+├── templates/
+│   └── index.html
+└── static/
+    └── style.css
 ```
 
 Dockerfile: Configuration file for creating a Docker image.
