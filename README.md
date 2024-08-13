@@ -28,11 +28,13 @@ Open your browser and go to:
 http://localhost:5000
 
 ## 📂 Project structure
+```bash
 ├── Dockerfile
 ├── docker-compose.yml
 ├── app.py
 ├── requirements.txt
 └── README.md
+```
 
 Dockerfile: Configuration file for creating a Docker image.
 docker-compose.yml: The file for orchestration of Docker containers.
