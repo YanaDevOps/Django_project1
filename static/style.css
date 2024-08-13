@@ -1,70 +1,54 @@
-/* Body styling */
-body {
+body, html {
+    height: 100%;
     margin: 0;
-    padding: 0;
-    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(120deg, #89f7fe, #66a6ff);
+    background: linear-gradient(135deg, #32a852, #287dc4);
     overflow: hidden;
-    position: relative;
 }
 
-/* Adding noise overlay */
-body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('https://www.transparenttextures.com/patterns/45-degree-fabric-light.png');
-    opacity: 0.1; /* Adjust the opacity for noise effect */
+.container {
+    text-align: center;
     z-index: 1;
 }
 
-/* Container for the text */
-.container {
-    text-align: center;
-    color: white;
-    z-index: 2; /* Ensures text is above the noise overlay */
-}
-
-/* Styling for h1 element */
-.container h1 {
+h1 {
     font-size: 4em;
-    margin: 0;
+    margin-bottom: 20px;
 }
 
-/* Styling for p element */
-.container p {
+p {
     font-size: 1.5em;
-    margin-top: 10px;
 }
 
-/* Background animation effect */
-body::after {
+/* Animated waves background */
+body::before, body::after {
     content: "";
     position: absolute;
-    top: -20%;
-    left: -20%;
-    width: 140%;
-    height: 140%;
-    background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.3) 0%, rgba(0,0,0,0) 70%);
-    animation: moveBackground 20s linear infinite; /* Adjusted duration for faster animation */
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: radial-gradient(circle at center, rgba(255,255,255,0.1), rgba(255,255,255,0) 70%);
     z-index: 0;
+    animation: wave-animation 5s infinite linear;
 }
 
-/* Keyframes for background movement */
-@keyframes moveBackground {
+body::after {
+    animation-delay: -5s;
+}
+
+@keyframes wave-animation {
     0% {
-        transform: translateX(0) translateY(0);
+        transform: translateY(0) translateX(0) rotate(0deg);
     }
     50% {
-        transform: translateX(5%) translateY(5%);
+        transform: translateY(5%) translateX(5%) rotate(2deg);
     }
     100% {
-        transform: translateX(0) translateY(0);
+        transform: translateY(0) translateX(0) rotate(0deg);
     }
 }
