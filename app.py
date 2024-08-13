@@ -1,7 +1,5 @@
-### 2. Updated `app.py`
-Добавим несколько функций в ваше приложение, чтобы оно выглядело более интересно.
+# 2. Updated `app.py`
 
-```python
 from flask import Flask, jsonify, request
 
 app = Flask(__name__)
