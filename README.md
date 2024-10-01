@@ -60,4 +60,4 @@ Docker
 ## 👤 Author
 Name: Yana Lysenko
 
-GitHub:![YanaDevOps]([https://img.shields.io/badge/Текст-Значение-Цвет.svg](https://github.com/YanaDevOps))
+GitHub: [YanaDevOps]([https://github.com/YanaDevOps](https://github.com/YanaDevOps))
