@@ -43,7 +43,7 @@ Python_project_1/
 ```
 
 Dockerfile: Configuration file for creating a Docker image.
-docker-compose.yml: The file for orchestration of Docker containers.
+docker-compose.yml: The file for the orchestration of Docker containers.
 app.py: The main Flask application file.
 requirements.txt: A file containing Python dependencies.
 README.md: Project documentation.
@@ -60,4 +60,4 @@ Docker
 ## 👤 Author
 Name: Yana Lysenko
 
-GitHub: [YanaDevOps]([https://github.com/YanaDevOps](https://github.com/YanaDevOps))
+GitHub: [YanaDevOps](https://github.com/YanaDevOps)
